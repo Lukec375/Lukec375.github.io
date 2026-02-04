@@ -31,7 +31,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 240, 245, 0.45); /* soft pink tint for readability */
+      background: rgba(255, 240, 245, 0.45);
       z-index: -2;
     }
 
@@ -242,16 +242,16 @@
   </div>
 
   <div id="yes-page">
-    <h2 class="response-h2">YAYYYYY! 🎉💖</h2>
+    <h2 class="response-h2">YESSS BABYYY, I AM SO HAPPY! 🎉💖</h2>
     <img class="response-img" src="https://assets.teenvogue.com/photos/5994baf49bca9f4c417198b7/16:9/w_2560,c_limit/MCDTANG_EC051_H.JPG" alt="Rapunzel and Flynn in the magical lantern scene from Tangled">
-    <p class="response-p">Just like Rapunzel and Flynn under all those lanterns... this is going to be our most magical Valentine's ever! I love you so much, Ari 😘✨</p>
+    <p class="response-p">You and I are like Rapunzel and Flynn but I love you even more than he loves her hehe 😘✨</p>
     <button class="yay-btn" onclick="alert('My heart is exploding with happiness! 💥❤️ Let’s plan the best date ever!')">I'm so happy!</button>
   </div>
 
   <div id="sad-page">
-    <h2 class="response-h2">Oh no... my heart 💔</h2>
+    <h2 class="response-h2">Now kitty is sad... 💔</h2>
     <img class="response-img" src="https://thumbs.dreamstime.com/b/apology-eyes-adorable-kitten-holding-i-m-sorry-sign-image-melts-hearts-tiny-peering-torn-edges-305639152.jpg" alt="Adorable sad kitten holding 'I'm sorry' sign">
-    <p class="response-p">Look at this poor little guy... he believed in us so much 😿<br>Are you really sure? Give your Luka one more chance? 🥺</p>
+    <p class="response-p">think about it again pleeeeeassseeee 🥺😿</p>
     <button class="back-btn" onclick="goBack()">Okay fine... ask me again ❤️</button>
   </div>
 
