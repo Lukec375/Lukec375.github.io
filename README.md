@@ -205,11 +205,13 @@
     </header>
 
     <div class="letter">
-      <p>My dearest Ari,</p>
+      <p>My beautiful cinnamon,</p>
       
-      <p>Every day with you feels like Valentine's Day already... but I still want to make it official 😊</p>
+      <p>You are the love of my life, and without you, I feel like only half of myself. Your smile lights up my entire world, your eyes hold a kindness and sparkle that make my heart skip every time I look at you. Your beauty — inside and out — takes my breath away; the way you glow with warmth, grace, and that effortless charm is something I'll never get tired of admiring.</p>
       
-      <p>You make my heart do stupid little flips, you laugh at my terrible jokes, and somehow you make even the most boring days feel magical.</p>
+      <p>You've shown me what true love really means: it's in the little moments, the way you make me laugh until my sides hurt, how you turn ordinary days into something magical just by being you. You make me happier than I ever thought possible, and you've taught me to love more deeply, more openly, more completely.</p>
+      
+      <p>You mean everything to me, Ari. I would move mountains, cross oceans, do absolutely anything for you — because a life with you is the only one I want.</p>
       
       <p>So I have one very important question for you...</p>
 
