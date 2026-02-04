@@ -144,6 +144,7 @@
       border-radius: 20px;
       box-shadow: 0 15px 40px rgba(0,0,0,0.6);
       margin: 2rem auto;
+      display: block;
     }
 
     .response-h2 {
@@ -232,14 +233,14 @@
 
   <div id="yes-page">
     <h2 class="response-h2">YAYYYYY! 🎉💖</h2>
-    <img class="response-img" src="https://atomtickets.com/movie-news/wp-content/uploads/2020/11/tangled-lantern.jpeg" alt="Rapunzel and Flynn in the magical lantern scene">
+    <img class="response-img" src="https://assets.teenvogue.com/photos/5994baf49bca9f4c417198b7/16:9/w_2560,c_limit/MCDTANG_EC051_H.JPG" alt="Rapunzel and Flynn in the magical lantern scene from Tangled">
     <p class="response-p">Just like Rapunzel and Flynn under all those lanterns... this is going to be our most magical Valentine's ever! I love you so much, Ari 😘✨</p>
     <button class="yay-btn" onclick="alert('My heart is exploding with happiness! 💥❤️ Let’s plan the best date ever!')">I'm so happy!</button>
   </div>
 
   <div id="sad-page">
     <h2 class="response-h2">Oh no... my heart 💔</h2>
-    <img class="response-img" src="https://thumbs.dreamstime.com/b/cat-guilty-look-holding-note-its-paws-says-sorry-cat-guilty-look-holding-note-its-paws-343394438.jpg" alt="Very sad guilty-looking cat holding a 'sorry' sign">
+    <img class="response-img" src="https://thumbs.dreamstime.com/b/apology-eyes-adorable-kitten-holding-i-m-sorry-sign-image-melts-hearts-tiny-peering-torn-edges-305639152.jpg" alt="Adorable sad kitten holding 'I'm sorry' sign">
     <p class="response-p">Look at this poor little guy... he believed in us so much 😿<br>Are you really sure? Give your Luka one more chance? 🥺</p>
     <button class="back-btn" onclick="goBack()">Okay fine... ask me again ❤️</button>
   </div>
@@ -268,7 +269,6 @@
     function showYes() {
       document.getElementById('main-content').style.display = 'none';
       document.getElementById('yes-page').style.display = 'block';
-      // Optional: could add confetti or more effects here later
     }
 
     // Show sad cat
