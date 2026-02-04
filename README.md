@@ -109,15 +109,60 @@
       box-shadow: 0 15px 30px rgba(255, 51, 102, 0.4);
     }
 
-    .maybe {
+    .no {
       background: #ffebee;
       color: #ff3366;
       border: 3px solid #ff3366;
     }
 
-    .maybe:hover {
+    .no:hover {
       background: #ff3366;
       color: white;
+      transform: scale(1.1);
+    }
+
+    #sad-page {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2c003e, #4a0072);
+      color: white;
+    }
+
+    #sad-page h2 {
+      font-size: 3.5rem;
+      margin: 1rem 0;
+      color: #ff99cc;
+    }
+
+    #sad-cat {
+      max-width: 90%;
+      max-height: 60vh;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      margin: 2rem auto;
+    }
+
+    #sad-page p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 1.5rem auto;
+      line-height: 1.5;
+    }
+
+    .back-btn {
+      background: linear-gradient(45deg, #ff99cc, #ff6699);
+      color: white;
+      font-size: 1.4rem;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+
+    .back-btn:hover {
       transform: scale(1.1);
     }
 
@@ -138,33 +183,44 @@
 
   <div class="hearts" id="hearts"></div>
 
-  <header>
-    <h1>Hey [Her Name / Nickname] 💕</h1>
-  </header>
+  <div id="main-content">
 
-  <div class="letter">
-    <p>My love,</p>
-    
-    <p>Every day with you feels like Valentine's Day already... but I still want to make it official 😊</p>
-    
-    <p>You make my heart do stupid little flips, you laugh at my terrible jokes, and somehow you make even boring days feel magical.</p>
-    
-    <p>So I have one very important question for you...</p>
+    <header>
+      <h1>Hey [Her Name / Nickname] 💕</h1>
+    </header>
 
-    <h2 style="text-align:center; color: var(--red); margin: 2rem 0; font-size: 2.2rem;">
-      Will you be my Valentine? 🥺❤️
-    </h2>
+    <div class="letter">
+      <p>My love,</p>
+      
+      <p>Every day with you feels like Valentine's Day already... but I still want to make it official 😊</p>
+      
+      <p>You make my heart do stupid little flips, you laugh at my terrible jokes, and somehow you make even boring days feel magical.</p>
+      
+      <p>So I have one very important question for you...</p>
 
-    <div class="signature">
-      Forever yours,<br>
-      [Your Name / Nickname] 💌
+      <h2 style="text-align:center; color: var(--red); margin: 2rem 0; font-size: 2.2rem;">
+        Will you be my Valentine? 🥺❤️
+      </h2>
+
+      <div class="signature">
+        Forever yours,<br>
+        [Your Name / Nickname] 💌
+      </div>
     </div>
+
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes! Of course! 💖</button>
+      
+      <button class="no" onclick="showSadCat()">No... sorry 😔</button>
+    </div>
+
   </div>
 
-  <div class="buttons">
-    <button class="yes" onclick="alert('YAYYYYY! 🎉💖 I love you so much! Let’s make this the best Valentine’s ever 😘')">Yes! Of course! 💖</button>
-    
-    <button class="maybe" onclick="alert('Take your time baby... but you know I’m not letting you go either way 😏❤️')">Umm... ask again in 5 mins? 😳</button>
+  <div id="sad-page">
+    <h2>Oh no... my heart just broke 💔</h2>
+    <img id="sad-cat" src="https://thumbs.dreamstime.com/b/sad-alone-gray-tabby-cat-resting-head-broken-red-heart-adoption-stray-pet-donation-to-animal-shelters-400406308.jpg" alt="Very sad cat with broken heart">
+    <p>Look at this poor kitty... he believed in us 😿<br>Are you really sure? Give me one more chance? 🥺</p>
+    <button class="back-btn" onclick="goBack()">Okay fine... ask me again ❤️</button>
   </div>
 
   <footer>
@@ -186,8 +242,24 @@
     }
 
     setInterval(createHeart, 400);
-    // Initial burst
     for(let i=0; i<15; i++) createHeart();
+
+    // Interactions
+    function sayYes() {
+      alert('YAYYYYY! 🎉💖 I love you so much! Let’s make this the best Valentine’s ever 😘');
+      // Optional: could redirect or show fireworks/confetti later
+    }
+
+    function showSadCat() {
+      document.getElementById('main-content').style.display = 'none';
+      document.getElementById('sad-page').style.display = 'block';
+      // Optional: stop hearts or change bg if you want
+    }
+
+    function goBack() {
+      document.getElementById('sad-page').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
   </script>
 
 </body>
