@@ -139,6 +139,18 @@
     #yes-page {
       background: linear-gradient(135deg, #4a148c, #7b1fa2);
       color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #yes-page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('https://thumbs.dreamstime.com/b/shimmering-glass-hearts-floating-pink-clouds-abstract-dreamy-background-three-dimensional-rendering-soft-pastel-colors-367478292.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.15;
+      z-index: -1;
     }
 
     #sad-page {
@@ -164,10 +176,11 @@
     #sad-page .response-h2 { color: #ff99cc; }
 
     .response-p {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       max-width: 700px;
-      margin: 1.5rem auto;
-      line-height: 1.5;
+      margin: 2rem auto;
+      line-height: 1.6;
+      font-weight: 500;
     }
 
     .back-btn, .yay-btn {
@@ -256,8 +269,10 @@
   </div>
 
   <footer>
-    Made with all my love just for you, Ari • February 2026
+    Created with all my love by Luka just for Ari 💕 • February 2026
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
   <script>
     // Floating hearts
@@ -275,10 +290,19 @@
     setInterval(createHeart, 400);
     for(let i = 0; i < 15; i++) createHeart();
 
-    // Show yes response
+    // Show yes response with confetti
     function showYes() {
       document.getElementById('main-content').style.display = 'none';
       document.getElementById('yes-page').style.display = 'block';
+      
+      // Pink romantic confetti burst
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#ff3366', '#ff6699', '#ff99cc', '#ffb3d9', '#ffffff', '#ffeb3b'],
+        ticks: 300
+      });
     }
 
     // Show sad cat
