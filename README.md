@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To My Favorite Person 💌</title>
+  <title>To My Ari 💌</title>
   <style>
     :root {
       --pink: #ff85c0;
@@ -121,22 +121,24 @@
       transform: scale(1.1);
     }
 
-    #sad-page {
+    #yes-page, #sad-page {
       display: none;
       text-align: center;
       padding: 60px 20px;
       min-height: 100vh;
+    }
+
+    #yes-page {
+      background: linear-gradient(135deg, #4a148c, #7b1fa2);
+      color: white;
+    }
+
+    #sad-page {
       background: linear-gradient(135deg, #2c003e, #4a0072);
       color: white;
     }
 
-    #sad-page h2 {
-      font-size: 3.5rem;
-      margin: 1rem 0;
-      color: #ff99cc;
-    }
-
-    #sad-cat {
+    .response-img {
       max-width: 90%;
       max-height: 60vh;
       border-radius: 20px;
@@ -144,14 +146,22 @@
       margin: 2rem auto;
     }
 
-    #sad-page p {
+    .response-h2 {
+      font-size: 3.5rem;
+      margin: 1rem 0;
+    }
+
+    #yes-page .response-h2 { color: #ffccff; }
+    #sad-page .response-h2 { color: #ff99cc; }
+
+    .response-p {
       font-size: 1.5rem;
       max-width: 700px;
       margin: 1.5rem auto;
       line-height: 1.5;
     }
 
-    .back-btn {
+    .back-btn, .yay-btn {
       background: linear-gradient(45deg, #ff99cc, #ff6699);
       color: white;
       font-size: 1.4rem;
@@ -162,7 +172,11 @@
       margin-top: 2rem;
     }
 
-    .back-btn:hover {
+    .yay-btn {
+      background: linear-gradient(45deg, #ffeb3b, #ff9800);
+    }
+
+    .back-btn:hover, .yay-btn:hover {
       transform: scale(1.1);
     }
 
@@ -186,15 +200,15 @@
   <div id="main-content">
 
     <header>
-      <h1>Hey [Her Name / Nickname] 💕</h1>
+      <h1>Hey Ari 💕</h1>
     </header>
 
     <div class="letter">
-      <p>My love,</p>
+      <p>My dearest Ari,</p>
       
       <p>Every day with you feels like Valentine's Day already... but I still want to make it official 😊</p>
       
-      <p>You make my heart do stupid little flips, you laugh at my terrible jokes, and somehow you make even boring days feel magical.</p>
+      <p>You make my heart do stupid little flips, you laugh at my terrible jokes, and somehow you make even the most boring days feel magical.</p>
       
       <p>So I have one very important question for you...</p>
 
@@ -204,27 +218,34 @@
 
       <div class="signature">
         Forever yours,<br>
-        [Your Name / Nickname] 💌
+        Luka 💌
       </div>
     </div>
 
     <div class="buttons">
-      <button class="yes" onclick="sayYes()">Yes! Of course! 💖</button>
+      <button class="yes" onclick="showYes()">Yes! Of course! 💖</button>
       
-      <button class="no" onclick="showSadCat()">No... sorry 😔</button>
+      <button class="no" onclick="showSad()">No... sorry 😔</button>
     </div>
 
   </div>
 
+  <div id="yes-page">
+    <h2 class="response-h2">YAYYYYY! 🎉💖</h2>
+    <img class="response-img" src="https://atomtickets.com/movie-news/wp-content/uploads/2020/11/tangled-lantern.jpeg" alt="Rapunzel and Flynn in the magical lantern scene">
+    <p class="response-p">Just like Rapunzel and Flynn under all those lanterns... this is going to be our most magical Valentine's ever! I love you so much, Ari 😘✨</p>
+    <button class="yay-btn" onclick="alert('My heart is exploding with happiness! 💥❤️ Let’s plan the best date ever!')">I'm so happy!</button>
+  </div>
+
   <div id="sad-page">
-    <h2>Oh no... my heart just broke 💔</h2>
-    <img id="sad-cat" src="https://thumbs.dreamstime.com/b/sad-alone-gray-tabby-cat-resting-head-broken-red-heart-adoption-stray-pet-donation-to-animal-shelters-400406308.jpg" alt="Very sad cat with broken heart">
-    <p>Look at this poor kitty... he believed in us 😿<br>Are you really sure? Give me one more chance? 🥺</p>
+    <h2 class="response-h2">Oh no... my heart 💔</h2>
+    <img class="response-img" src="https://thumbs.dreamstime.com/b/cat-guilty-look-holding-note-its-paws-says-sorry-cat-guilty-look-holding-note-its-paws-343394438.jpg" alt="Very sad guilty-looking cat holding a 'sorry' sign">
+    <p class="response-p">Look at this poor little guy... he believed in us so much 😿<br>Are you really sure? Give your Luka one more chance? 🥺</p>
     <button class="back-btn" onclick="goBack()">Okay fine... ask me again ❤️</button>
   </div>
 
   <footer>
-    Made with all my love just for you • February 2026
+    Made with all my love just for you, Ari • February 2026
   </footer>
 
   <script>
@@ -237,27 +258,29 @@
       heart.style.animationDuration = (Math.random() * 8 + 8) + 's';
       heart.style.fontSize = (Math.random() * 1.2 + 0.8) + 'rem';
       document.getElementById('hearts').appendChild(heart);
-      
       setTimeout(() => heart.remove(), 15000);
     }
 
     setInterval(createHeart, 400);
-    for(let i=0; i<15; i++) createHeart();
+    for(let i = 0; i < 15; i++) createHeart();
 
-    // Interactions
-    function sayYes() {
-      alert('YAYYYYY! 🎉💖 I love you so much! Let’s make this the best Valentine’s ever 😘');
-      // Optional: could redirect or show fireworks/confetti later
+    // Show yes response
+    function showYes() {
+      document.getElementById('main-content').style.display = 'none';
+      document.getElementById('yes-page').style.display = 'block';
+      // Optional: could add confetti or more effects here later
     }
 
-    function showSadCat() {
+    // Show sad cat
+    function showSad() {
       document.getElementById('main-content').style.display = 'none';
       document.getElementById('sad-page').style.display = 'block';
-      // Optional: stop hearts or change bg if you want
     }
 
+    // Go back to main
     function goBack() {
       document.getElementById('sad-page').style.display = 'none';
+      document.getElementById('yes-page').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
     }
   </script>
