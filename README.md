@@ -245,7 +245,7 @@
     <h2 class="response-h2">YESSS BABYYY, I AM SO HAPPY! 🎉💖</h2>
     <img class="response-img" src="https://assets.teenvogue.com/photos/5994baf49bca9f4c417198b7/16:9/w_2560,c_limit/MCDTANG_EC051_H.JPG" alt="Rapunzel and Flynn in the magical lantern scene from Tangled">
     <p class="response-p">You and I are like Rapunzel and Flynn but I love you even more than he loves her hehe 😘✨</p>
-    <button class="yay-btn" onclick="alert('My heart is exploding with happiness! 💥❤️ Let’s plan the best date ever!')">I'm so happy!</button>
+    <button class="yay-btn">I'm so happy!</button>
   </div>
 
   <div id="sad-page">
