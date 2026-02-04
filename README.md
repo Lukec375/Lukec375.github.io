@@ -9,7 +9,6 @@
       --pink: #ff85c0;
       --dark-pink: #ff4d94;
       --red: #ff3366;
-      --bg: #fff0f5;
     }
 
     * {
@@ -20,11 +19,20 @@
 
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #ffe4f1);
+      background: url('https://thumbs.dreamstime.com/b/shimmering-glass-hearts-floating-pink-clouds-abstract-dreamy-background-three-dimensional-rendering-soft-pastel-colors-367478292.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 240, 245, 0.45); /* soft pink tint for readability */
+      z-index: -2;
     }
 
     .hearts {
